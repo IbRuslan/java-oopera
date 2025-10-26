@@ -1,11 +1,15 @@
 package shows;
 
+import persons.Actor;
 import persons.Director;
 
-public class Ballet extends MusicalShow {
-    String choreographer;
+import java.util.ArrayList;
 
-    Ballet(String choreographer, String title, int duration, Director director, String musicAuthor, String librettoText){
+public class Ballet extends MusicalShow {
+    private String choreographer;
+
+    public Ballet(String title, int duration, Director director,
+           String musicAuthor, String librettoText, String choreographer){
         super(title, duration, director, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }

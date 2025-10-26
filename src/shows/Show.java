@@ -6,14 +6,45 @@ import persons.Director;
 import java.util.ArrayList;
 
 public class Show {
-    String title;
-    int duration;
-    Director director;
-    ArrayList<Actor> listOfActors;
+    protected String title;
+    protected int duration;
+    protected Director director;
+    protected ArrayList<Actor> listOfActors;
 
-    Show(String title, int duration, Director director) {
+    public Show(String title, int duration, Director director) {
         this.title = title;
         this.duration = duration;
         this.director = director;
+        this.listOfActors = new ArrayList<>();
+    }
+
+    public void printDirectorInfo() {
+        System.out.println("Режиссёр: " + director.toString());
+    }
+
+    public void printActorsInfo() {
+        System.out.println("Список актеров " + this.title + ": ");
+        for (Actor actor : listOfActors) {
+            System.out.println(actor.toString());
+        }
+    }
+
+    public void addActor(Actor newActor) {
+        if (listOfActors.contains(newActor)) {
+            System.out.println("Этот актер уже в списке.");
+        } else {
+            listOfActors.add(newActor);
+        }
+    }
+
+    public void replaceActor(String oldActorSurname, Actor newActor) {
+        for (Actor actor : listOfActors) {
+            if(actor.getSurname().equals(oldActorSurname)) {
+                listOfActors.remove(actor);
+                listOfActors.add(newActor);
+                return;
+            }
+        }
+        System.out.println("Актер по фамилии " + oldActorSurname + " не был найден.");
     }
 }
