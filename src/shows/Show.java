@@ -1,12 +1,17 @@
+package shows;
+
+import persons.Actor;
+import persons.Director;
+
 import java.util.ArrayList;
 
-public class Snow {
+public class Show {
     String title;
     int duration;
     Director director;
     ArrayList<Actor> listOfActors;
 
-    Snow(String title, int duration, Director director) {
+    Show(String title, int duration, Director director) {
         this.title = title;
         this.duration = duration;
         this.director = director;

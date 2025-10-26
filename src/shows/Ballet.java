@@ -1,4 +1,8 @@
-public class Ballet extends MusicalShow{
+package shows;
+
+import persons.Director;
+
+public class Ballet extends MusicalShow {
     String choreographer;
 
     Ballet(String choreographer, String title, int duration, Director director, String musicAuthor, String librettoText){

@@ -1,4 +1,8 @@
-public class MusicalShow extends Snow {
+package shows;
+
+import persons.Director;
+
+public class MusicalShow extends Show {
     String musicAuthor;
     String librettoText;
 

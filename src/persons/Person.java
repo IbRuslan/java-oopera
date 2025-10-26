@@ -1,3 +1,7 @@
+package persons;
+
+import utils.Gender;
+
 public class Person {
     String name;
     String surname;

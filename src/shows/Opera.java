@@ -1,3 +1,7 @@
+package shows;
+
+import persons.Director;
+
 public class Opera extends MusicalShow {
     int choirSize;
 
