@@ -1,16 +1,18 @@
 package shows;
 
-import persons.Actor;
 import persons.Director;
-
-import java.util.ArrayList;
+import persons.Person;
 
 public class Opera extends MusicalShow {
     private int choirSize;
 
     public Opera(String title, int duration, Director director,
-          String musicAuthor, String librettoText, int choirSize) {
+                 Person musicAuthor, String librettoText, int choirSize) {
         super(title, duration, director, musicAuthor, librettoText);
         this.choirSize = choirSize;
+    }
+
+    public int getChoirSize() {
+        return this.choirSize;
     }
 }

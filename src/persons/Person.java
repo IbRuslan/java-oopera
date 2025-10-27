@@ -7,7 +7,7 @@ public class Person {
     protected String surname;
     protected Gender gender;
 
-    Person(String firstName, String lastName, Gender gender) {
+    public Person(String firstName, String lastName, Gender gender) {
         this.name = firstName;
         this.surname = lastName;
         this.gender = gender;
@@ -18,5 +18,9 @@ public class Person {
     }
     public String getSurname() {
         return surname;
+    }
+
+    public Gender getGender() {
+        return gender;
     }
 }

@@ -1,5 +1,6 @@
 import persons.Actor;
 import persons.Director;
+import persons.Person;
 import shows.Ballet;
 import shows.Opera;
 import shows.Show;
@@ -15,17 +16,20 @@ public class Theatre {
         Director directorIvan = new Director("Иван", "Зубарев", Gender.MALE, 2);
         Director directorAlina = new Director("Алина", "Икрамова", Gender.FEMALE, 1);
 
+        Person choreographerSergey = new Person("Сергей", "Иванов", Gender.MALE);
+        Person musicAuthorPetr = new Person("Пётр", "Чайковский", Gender.MALE);
+
         Show snow = new Show("Гроза", 100, directorIvan);
         snow.addActor(actorRuslan);
         snow.addActor(actorSergey);
 
         Opera opera = new Opera("Евгений Онегин", 150, directorIvan,
-                "Пётр Чайковский", "История любви и судьбы", 25);
+                musicAuthorPetr, "История любви и судьбы", 25);
         opera.addActor(actorAnna);
         opera.addActor(actorRuslan);
 
         Ballet ballet = new Ballet("Лебединое озеро", 120, directorAlina,
-                "Пётр Чайковский", "Трагедия любви в волшебном мире", "Сергей Иванов");
+                musicAuthorPetr, "Трагедия любви в волшебном мире", choreographerSergey);
         ballet.addActor(actorSergey);
         ballet.addActor(actorAnna);
 
